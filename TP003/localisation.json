@@ -1,0 +1,28 @@
+{
+    "place_id":111700810,
+    "licence":"Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "osm_type":"way",
+    "osm_id":98663587,
+    "lat":"49.78091285",
+    "lon":"4.715385449898523",
+    "display_name":"Rue de Nouzonville, La Houillère, Charleville-Mézières, Ardennes, Grand Est, France métropolitaine, 08000, France",
+    "address":
+    {
+        "road":"Rue de Nouzonville",
+        "quarter":"La Houillère",
+        "town":"Charleville-Mézières",
+        "municipality":"Charleville-Mézières",
+        "county":"Ardennes",
+        "state":"Grand Est",
+        "country":"France",
+        "postcode":"08000",
+        "country_code":"fr"
+    },
+    "boundingbox":
+    [
+        "49.78076",
+        "49.7810734",
+        "4.7151426",
+        "4.7156276"
+    ]
+}

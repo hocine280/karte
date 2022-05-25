@@ -1,0 +1,697 @@
+/********** Tables des matières **********/
+/*****************************************
+    1. Variables 
+    2. General
+    3. Header/Menu
+    4. Home/Accueil
+    5. Etude Chiffrée
+    6. Prestations 
+    7. Newsletter
+    8. Footer
+    9. Cookies
+    10. PopContact
+*****************************************/
+/****** 1. Variables ******/
+:root
+{
+    --colorPrincipale :#3498DB;  
+    --colorTitle : #CDAA09; 
+    --duree:1s;
+}
+/****** 2. General ******/
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+}
+
+a 
+{
+    color: #202020;
+    text-decoration: none !important;
+}
+
+a,
+input, button,
+.form-control, .f 
+{
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+a:hover, a:active, a:focus 
+{
+    color: var(--colorPrincipale);
+    outline: none;
+}
+
+::-webkit-scrollbar
+{
+    width: 4px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    cursor: pointer;
+    background: var(--colorPrincipale);
+}
+.karte
+{
+    font-weight: bold;
+    color:var(--colorTitle); 
+}
+.from-bottom, .from-top, .from-left, .from-right
+{
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+.from-bottom 
+{
+    transform: translate(0px,50px);
+}
+.from-top 
+{
+    transform: translate(0px,-50px);
+}
+.from-left 
+{
+    transform: translate(-10px,0px);
+}
+.from-right
+{
+    transform: translate(10px,0px);
+}
+
+/****** 3. Header/Menu ******/ 
+.custom-navbar 
+{
+    border: none;
+    margin-bottom: 0;
+    padding: 25px 0;
+}
+
+.custom-navbar .navbar-brand 
+{
+    color: var(--colorTitle); 
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.top-nav-collapse 
+{
+    background: #ffffff;
+}
+
+.custom-navbar .navbar-nav 
+{
+    margin-left: 6em;
+}
+
+.custom-navbar .nav li a 
+{
+    font-size: 16px;
+    font-weight: normal;
+    color: #f0f0f0;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+@media(max-width : 700px)
+{
+    .custom-navbar .nav li a 
+    {
+        font-size: 16px;
+        font-weight: normal;
+        color: black;
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+}
+
+.custom-navbar .nav li a:hover 
+{
+    background: transparent;
+    color: var(--colorPrincipale);
+}
+
+.custom-navbar .navbar-nav > li > a:hover,
+.custom-navbar .navbar-nav > li > a:focus 
+{
+    background-color: transparent;
+}
+
+.custom-navbar .nav li.active > a 
+{
+    background-color: transparent;
+    color: var(--colorPrincipale);
+}
+
+.custom-navbar .navbar-toggle 
+{
+    border: none;
+    padding-top: 10px;
+}
+
+.custom-navbar .navbar-toggle 
+{
+    background-color: transparent;
+}
+
+.custom-navbar .navbar-toggle .icon-bar 
+{
+    background: var(--colorPrincipale);
+    border-color: transparent;
+}
+
+@media(min-width:750px) 
+{
+    .custom-navbar {
+        border-bottom: 0;
+        background: 0 0; 
+    }
+
+    .custom-navbar.top-nav-collapse {
+        background: #ffffff;
+        -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .top-nav-collapse .navbar-brand {
+        color: var(--colorTitle);
+    }
+
+    .top-nav-collapse .nav li a {
+        color: #575757;
+    }
+
+    .top-nav-collapse .nav .section-btn a {
+        color: #ffffff;
+    }
+}
+@media(max-width: 900px)
+{
+    .custom-navbar .collapse 
+    {
+        border-bottom : 1px solid grey;
+    }
+}
+
+/****** 4. Home/Accueil ******/
+#home 
+{
+    background: url('../images/LigneCode.jpg') no-repeat center center;
+    background-size: cover;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 12em;
+    text-align: center;
+}
+
+#home h1 
+{
+    color: var(--colorPrincipale);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight : bold; 
+    font-size : 30px;
+}
+#home h2 
+{
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.overlay 
+{
+    background: #536976;
+    background: -webkit-linear-gradient(to right, #292E49, #536976); 
+    background: linear-gradient(to right, #292E49, #536976); 
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.rectangle 
+{
+    width: 80px;
+    height: 18px;
+    background : linear-gradient(280deg, var(--colorPrincipale), #041267);
+    margin-bottom: 2rem;
+}
+.text-left p
+{
+    color : white; 
+    font-weight: bold;
+    font-size : 20px;
+}
+
+/****** 5. Etude chiffrée ******/
+#EtudeChiffree
+{
+    background : linear-gradient(280deg, var(--colorPrincipale), #041267);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#EtudeChiffree .col-md-9 h1
+{
+    color : white; 
+    margin-bottom : 20px;
+    font-weight: bold;
+}
+#EtudeChiffree .col-md-9 p
+{
+    color : white; 
+    font-size : 18px;
+}
+#EtudeChiffree .col-md-3 h1
+{
+    color : white; 
+    font-size: 25px;
+    margin-bottom : 20px;
+}
+#EtudeChiffree .col-md-3 button
+{
+    color : white; 
+    padding: 10px;
+    background: transparent;
+    border : 1px solid white; 
+    border-radius : 25px 25px 25px 25px; 
+}
+#EtudeChiffree .col-md-3 button:hover
+{
+    color : var(--colorPrincipale); 
+    background: white;
+    border : 1px solid white; 
+    border-radius : 25px 25px 25px 25px; 
+}
+#EtudeChiffree .col-md-3 button a 
+{
+    color : white; 
+}
+#EtudeChiffree .col-md-3 button a:hover
+{
+    color : var(--colorPrincipale); 
+}
+/****** 6. Prestations ******/
+#prestations .col-md-4
+{
+    border-radius: 20px;
+}
+#prestations .col-md-4:hover
+{
+    background : linear-gradient(280deg,#041267, var(--colorPrincipale));
+    border-radius: 20px;
+    color : white;
+    transition: all .5s;
+}   
+/****** 7. Newsletter ******/ 
+#newsletter
+{
+    background : linear-gradient(280deg, var(--colorPrincipale), #041267);
+}
+#newsletter .container 
+{
+    padding-top : 40px; 
+    padding-bottom : 40px; 
+}
+.text-newsletter
+{
+    color : white; 
+    font-weight : bold; 
+    font-size : 25px;
+    margin-bottom : 0px;  
+}
+.accept-newsletter
+{
+    color : white; 
+    font-size : 20px;
+}
+#newsletter input[type='email'] 
+{
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #f0f0f0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 10px 0;
+    height : 30px; 
+    color : white
+}
+#newsletter input[type='submit'] 
+{
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: none;
+    margin: 10px 0;
+    color : white
+}
+
+#newsletter input[type='email']::placeholder
+{
+    color : white; 
+}
+#newsletter input[type='email']:focus
+{
+    border : none; 
+}
+#newsletter input[type='submit']:hover
+{
+    background: white;
+    border: 1px solid white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: none;
+    margin: 10px 0;
+    color : var(--colorPrincipale)
+}
+#newsletter .accept-newsletter span 
+{
+    color : var(--colorTitle); 
+    font-weight: bold;
+}
+/****** 8. Footer ******/ 
+.footer
+{
+    background-color:#202020;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+}
+.footer span
+{
+    font-weight: bold;
+    color : var(--colorTitle); 
+}
+.footer hr
+{
+    border-top-color:#bbb;
+    opacity:0.5
+}
+.footer hr.small
+{
+    margin:20px 0
+}
+.footer h6
+{
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+}
+.footer a
+{
+    color:#737373;
+}
+.footer a:hover
+{
+    color:var(--colorPrincipale);
+    text-decoration:none;
+}
+.footer-links
+{
+    padding-left:0;
+    list-style:none
+}
+.footer-links li
+{
+    display:block
+}
+.footer-links a
+{
+    color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+    color:var(--colorPrincipale);
+    text-decoration:none;
+}
+.footer-links.inline li
+{
+    display:inline-block
+}
+.footer .social-icons
+{
+    text-align:right
+}
+.footer .social-icons a
+{
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+}
+.copyright-text
+{
+    margin:0
+}
+@media (max-width:991px)
+{
+    .footer [class^=col-]
+    {
+        margin-bottom:30px
+    }
+}
+@media (max-width:767px)
+{
+    .footer
+    {
+        padding-bottom:0
+    }
+    .footer .copyright-text,.footer .social-icons
+    {
+        text-align:center
+    }
+}
+.social-icons
+{
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+}
+.social-icons li
+{
+    display:inline-block;
+    margin-bottom:4px
+}
+.social-icons li.title
+{
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+}
+.social-icons a
+{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+    color:#fff;
+    background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+}
+.social-icons a.facebook:hover
+{
+    background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+    background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+    background-color:#007bb6
+}
+.social-icons a.youtube:hover
+{
+    background-color:red; 
+}
+.social-icons a.instagram:hover
+{
+    background-color:black; 
+}
+.social-icons a.pinterest:hover
+{
+    background-color:red; 
+}
+@media (max-width:767px)
+{
+    .social-icons li.title
+    {
+        display:block;
+        margin-right:0;
+        font-weight:600; 
+    }
+}
+/****** 9. Cookies ******/
+@media(min-width: 900px)
+{
+    .banner-cookie
+    {
+        position : fixed; 
+        text-align : center; 
+        background-color:white; 
+        padding: 10px;
+        bottom :0; 
+        width : 100%; 
+        justify-content : space-around; 
+        display : flex;
+    }
+    .banner-cookie > .text-cookie
+    {
+        display : inline-block; 
+        float : left; 
+        margin-right : 10px; 
+        padding-top : 5px; 
+    }
+    .banner-cookie > .button-cookie > button
+    {
+        display : inline-block; 
+        float : right; 
+        border : 1px solid var(--colorPrincipale); 
+        border-radius : 20px 20px 20px 20px; 
+        background-color : white; 
+        color : black; 
+        padding: 3px;
+        padding-left : 10px;  
+        padding-right : 10px;  
+    }
+    .banner-cookie > .button-cookie > button:hover
+    {
+        display : inline-block; 
+        float : right; 
+        border : 1px solid var(--colorPrincipale); 
+        border-radius : 50px; 
+        background-color : var(--colorPrincipale); 
+        color : white; 
+        padding: 3px;
+        padding-left : 10px;  
+        padding-right : 10px; 
+    }
+}
+@media(max-width: 740px)
+{
+    .banner-cookie
+    {
+        position : fixed; 
+        text-align : center; 
+        background-color:white; 
+        padding: 10px;
+        bottom :0; 
+        width : 100%; 
+        justify-content : space-around; 
+        display : flex;
+    }
+    .banner-cookie > .text-cookie
+    {
+        display : inline-block; 
+        float : left; 
+        margin-right : 10px; 
+        padding-top : 5px; 
+    }
+    .banner-cookie > .button-cookie
+    {
+        padding-top : 30px;
+    }
+    .banner-cookie > .button-cookie > button
+    {
+        display : inline-block; 
+        float : right; 
+        border : 1px solid var(--colorPrincipale); 
+        border-radius : 20px 20px 20px 20px; 
+        background-color : white; 
+        color : black; 
+        padding: 3px;
+        padding-left : 10px;  
+        padding-right : 10px;  
+    }
+    .banner-cookie > .button-cookie > button:hover
+    {
+        display : inline-block; 
+        float : right; 
+        border : 1px solid var(--colorPrincipale); 
+        border-radius : 50px; 
+        background-color : var(--colorPrincipale); 
+        color : white; 
+        padding: 3px;
+        padding-left : 10px;  
+        padding-right : 10px; 
+    }
+}
+/****** 10. PopContact ******/
+@media (min-width:900px)
+{
+    #popContact
+    {
+        background : linear-gradient(280deg, var(--colorPrincipale), #041267);
+        bottom : 30px;
+        right : 30px;  
+        position : fixed; 
+        text-align : center;  
+        padding: 10px;
+        justify-content : space-around; 
+        display : flex;
+        border-radius : 90px; 
+        width : 80px; 
+        height : 80px; 
+        vertical-align: middle;
+    }
+    #popContact:hover 
+    {
+        background : linear-gradient(280deg, #041267, var(--colorPrincipale));
+    }
+    #popContact a 
+    {
+        vertical-align: middle;
+        color : white; 
+        font-size: 40px;
+        transform : rotate(-15deg); 
+    }
+}
+@media (max-width : 750px)
+{
+    #popConctact
+    {
+        display : none;
+    }
+}
